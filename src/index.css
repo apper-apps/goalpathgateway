@@ -24,11 +24,9 @@
   .btn-secondary {
     @apply bg-white border border-gray-200 text-gray-700 font-medium px-6 py-3 rounded-lg shadow-sm hover:bg-gray-50 hover:shadow-md transform hover:scale-105 active:scale-95 transition-all duration-200;
   }
-  
-  .card {
-    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-250 ease-in-out;
+.card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-200 ease-in-out;
   }
-  
   .card-hover {
     @apply transform hover:scale-102 transition-transform duration-200;
   }
