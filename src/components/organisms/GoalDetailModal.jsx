@@ -208,15 +208,31 @@ Notes: ${c.note}
               <ProgressBar progress={goal.overallProgress} size="lg" />
             </div>
             
-            {/* Milestones */}
+{/* Milestones */}
             <div className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Milestones ({goal.milestones?.filter(m => m.completed).length || 0}/{goal.milestones?.length || 0})
-              </h3>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Milestones ({goal.milestones?.filter(m => m.completed).length || 0}/{goal.milestones?.length || 0})
+                </h3>
+                <div className="flex items-center space-x-2 text-sm text-gray-600">
+                  <ApperIcon name="Bell" size={16} />
+                  <span>
+                    {goal.milestones?.filter(m => m.reminderSettings?.enabled && !m.completed).length || 0} reminders active
+                  </span>
+                </div>
+              </div>
               <MilestoneList
                 milestones={goal.milestones || []}
                 onToggle={handleToggleMilestone}
                 editable={!updatingMilestone}
+                goalId={goal.Id}
+                onMilestoneUpdated={(updatedMilestone) => {
+                  const updatedMilestones = goal.milestones.map(m =>
+                    m.Id === updatedMilestone.Id ? updatedMilestone : m
+                  );
+                  const updatedGoal = { ...goal, milestones: updatedMilestones };
+                  onGoalUpdated(updatedGoal);
+                }}
               />
             </div>
             

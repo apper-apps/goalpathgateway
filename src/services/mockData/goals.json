@@ -8,40 +8,65 @@
     "currentStreak": 12,
     "overallProgress": 65,
     "milestones": [
-      {
+{
         "Id": 1,
         "title": "Complete beginner course (100 lessons)",
         "completed": true,
         "targetDate": "2024-02-15T23:59:59Z",
-        "completedDate": "2024-02-10T15:30:00Z"
+        "completedDate": "2024-02-10T15:30:00Z",
+        "reminderSettings": {
+          "enabled": false,
+          "timing": 1,
+          "frequency": "once"
+        }
       },
-      {
+{
         "Id": 2,
         "title": "Practice 30 minutes daily for 30 days",
         "completed": true,
         "targetDate": "2024-03-15T23:59:59Z",
-        "completedDate": "2024-03-12T20:00:00Z"
+        "completedDate": "2024-03-12T20:00:00Z",
+        "reminderSettings": {
+          "enabled": false,
+          "timing": 1,
+          "frequency": "once"
+        }
       },
-      {
+{
         "Id": 3,
         "title": "Have first 10-minute conversation with native speaker",
         "completed": false,
         "targetDate": "2024-04-15T23:59:59Z",
-        "completedDate": null
+        "completedDate": null,
+        "reminderSettings": {
+          "enabled": true,
+          "timing": 3,
+          "frequency": "daily"
+        }
       },
-      {
+{
         "Id": 4,
         "title": "Watch Spanish movie with subtitles",
         "completed": false,
         "targetDate": "2024-05-15T23:59:59Z",
-        "completedDate": null
+        "completedDate": null,
+        "reminderSettings": {
+          "enabled": false,
+          "timing": 7,
+          "frequency": "once"
+        }
       },
-      {
+{
         "Id": 5,
         "title": "Hold 30-minute conversation without English",
         "completed": false,
         "targetDate": "2024-06-10T23:59:59Z",
-        "completedDate": null
+        "completedDate": null,
+        "reminderSettings": {
+          "enabled": true,
+          "timing": 7,
+          "frequency": "weekly"
+        }
       }
     ]
   },
