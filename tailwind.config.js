@@ -92,7 +92,10 @@ export default {
         pulseSoft: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.8' }
-        }
+}
+      },
+      scale: {
+        '102': '1.02',
       }
     },
   },
