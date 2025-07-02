@@ -1,0 +1,111 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:from-primary-600 hover:to-primary-700 hover:shadow-lg transform hover:scale-105 active:scale-95 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-200 text-gray-700 font-medium px-6 py-3 rounded-lg shadow-sm hover:bg-gray-50 hover:shadow-md transform hover:scale-105 active:scale-95 transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-250 ease-in-out;
+  }
+  
+  .card-hover {
+    @apply transform hover:scale-102 transition-transform duration-200;
+  }
+  
+  .progress-bar {
+    @apply bg-gradient-to-r from-secondary-400 to-primary-400 rounded-full transition-all duration-500 ease-out;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-colors duration-200 outline-none;
+  }
+  
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+  }
+  
+  .modal-content {
+    @apply bg-white rounded-2xl shadow-modal max-w-md w-full max-h-90vh overflow-y-auto;
+  }
+}
+
+/* Custom Toast Styling */
+.Toastify__toast-container {
+  @apply text-sm;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #FF6B6B 0%, #ee5a6f 100%);
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #6B5B95 0%, #5b4b7c 100%);
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #FFD93D 0%, #f9ca24 100%);
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Progress bar animation */
+@keyframes progressFill {
+  from { width: 0%; }
+}
+
+.progress-fill {
+  animation: progressFill 0.5s ease-out;
+}
+
+/* Streak badge glow */
+@keyframes streakGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 107, 107, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(255, 107, 107, 0.6); }
+}
+
+.streak-glow {
+  animation: streakGlow 1s ease-in-out;
+}
